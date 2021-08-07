@@ -4,17 +4,18 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                echo 'Checkout stage'
+                echo 'Checkout Stage'
             }
         }
         stage('Build') {
             steps {
-                echo 'Build'
+                echo 'Build Stage'
+                sh 'python --version'
             }
         }
         stage('Test') {
             steps {
-                echo 'Test stage'
+                echo 'Test Stage'
             }
         }
         stage('Deployment') {
