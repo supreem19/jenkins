@@ -5,13 +5,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checkout Stage'
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/anilbitmca/Python_Work.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/supreem19/Python_Work.git']]])
             }
         }
         stage('Build') {
             steps {
                 echo 'Build Stage'
-                bat 'python SmallestElement.py'
+                bat 'python LargestElement.py'
             }
         }
         stage('Test') {
