@@ -11,7 +11,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build Stage'
-                bat 'hello.java'
+                bat 'javac hello.java'
+                bat 'java hello.class'
             }
         }
         stage('Test') {
