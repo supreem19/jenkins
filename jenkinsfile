@@ -11,8 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Build Stage'
-                bat 'javac hello.java'
-                bat 'java hello.class'
+                bat 'python SmallestElement.py'
             }
         }
         stage('Test') {
